@@ -3,11 +3,13 @@ from machine import Pin, PWM
 
 class ServoMotor:
     
-    def __init__(self, freq):
+    def __init__(self):
         self.pwm = PWM(Pin(1))
-        self.pwm.freq = freq
-
+        self.freq = 50
+        
     # Gira o servo - (1000 é grau 0 e 9000 é grau 180)
     def ativa_servo(self):
-        for position in range(1000, 9000, self.pwm.freq):
-            pwm.duty_u16(position)
+        print(self.freq)
+        for position in range(1000, 9000, self.freq):
+            self.pwm.duty_u16(position)
+            
