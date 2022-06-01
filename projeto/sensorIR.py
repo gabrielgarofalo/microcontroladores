@@ -8,7 +8,7 @@ class SensorIR:
 
     # Função pra detectar movimento
     def detecta_movimento(self):
-        if self.sensor.value() == 1:
+        if self.sensor.value() != 1:
             print("Movimento Detectado (IR)!")
             #self.saida.high()
             return True
