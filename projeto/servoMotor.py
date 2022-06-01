@@ -3,9 +3,9 @@ from machine import Pin, PWM
 
 class ServoMotor:
     
-    def __init__(self):
+    def __init__(self, pin: int):
         self.freq = 50
-        self.pwm = PWM(Pin(0))
+        self.pwm = PWM(Pin(pin))
         self.pwm.freq(self.freq)
         
         
