@@ -16,6 +16,6 @@ while True:
     if ir.detecta_movimento():
         servo_ir.ativa_servo()
     if sensor_movimento.detecta_movimento() or alimentar_agora.value() == 1:
-        print(alimentar_agora.value())
         servo_movimento.ativa_servo()
     utime.sleep(0.2)
+    
