@@ -4,7 +4,7 @@ from sensorIR import SensorIR
 import utime
 from machine import Pin
 
-print("Ola SIstemsa")
+print("Olá Sistemsa")
 
 servo_ir = ServoMotor(pin=19)
 servo_movimento = ServoMotor(pin=0)
